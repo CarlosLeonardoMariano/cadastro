@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<body>
+    <div class="objetos" id="objetos">
+        <div id="form">
+            <h2 class="form-title">Cadastro de Contato</h2>
+    
+            <div class="campo">
+                <label for="f_nome">Nome</label>
+                <input type="text" name="f_nome" id="f_nome" placeholder="Digite seu nome" required>
+            </div>
+    
+            <div class="campo">
+                <label for="f_telefone">Telefone</label>
+                <input type="text" name="f_telefone" id="f_telefone" placeholder="Digite seu telefone" required>
+            </div>
+    
+            <div class="campo">
+                <label for="f_email">Email</label>
+                <input type="email" name="f_email" id="f_email" placeholder="Digite seu e-mail" required>
+            </div>
+    
+            <div id="botaoes">
+                <button id="btn_gravar" class="btn">Gravar</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="listadecontatos"></div>
+    
+
+    <script src="index.js" type="module"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    
+</body>
+</html>
