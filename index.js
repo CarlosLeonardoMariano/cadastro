@@ -3,6 +3,7 @@ const email = document.getElementById('f_email');
 const telefone = document.getElementById('f_telefone');
 const botao = document.getElementById('btn_gravar');
 const listadecontatos = document.getElementById('listadecontatos');
+const removerTudo = document.getElementById('btn-remover-tudo')
 
 
 // Definindo a classe 'cadastro'
@@ -14,7 +15,16 @@ class Cadastro {
     }
 
     returnWEB() {
-        return `Nome: ${this.nomes} <br> Email: ${this.emails} <br> Telefones: ${this.telefones}`
+        return `
+                  <div class ="remover"> 
+        <p class = "dados">Nome: ${this.nomes} <br> Email: ${this.emails} <br> Telefones: ${this.telefones} <p/>
+        <div class = "dados"> 
+                      <button class="btn-remover" id="btn-remover">remover</button>
+                  <div/>
+                  <div/>
+
+                        `
+        
     }
 }
 
@@ -30,7 +40,7 @@ botao.addEventListener('click', (evt) => {
             text: "Insira seu nome!",
             className: "info",
             style: {
-              background: "linear-gradient(to right, #00b09b, #96c93d)",
+              background: "red",
             }
           }).showToast();
     }
@@ -40,7 +50,7 @@ botao.addEventListener('click', (evt) => {
             text: "Insira seu email!",
             className: "info",
             style: {
-              background: "linear-gradient(to right, #00b09b, #96c93d)",
+              background: "red",
             }
           }).showToast();
     }
@@ -50,7 +60,7 @@ botao.addEventListener('click', (evt) => {
             text: "Insira seu telefone!",
             className: "info",
             style: {
-              background: "linear-gradient(to right, #00b09b, #96c93d)",
+              background: "red",
             }
           }).showToast();
     } 
@@ -74,7 +84,23 @@ botao.addEventListener('click', (evt) => {
         text: "Cadastro concluido com sucessos!",
         className: "info",
         style: {
-          background: "linear-gradient(to right, #00b09b, #96c93d)",
+          background: "green",
         }
       }).showToast();}
+      
+})
+
+// FUNÇÃO PARA REMOVER ARQUIVO POR ARQUIVO
+listadecontatos.addEventListener('click', (evt)=> {
+if(evt.target && evt.target.classList.contains('btn-remover')) {
+  const del = evt.target.closest('.remover')
+  if(del){
+    del.remove()
+  }
+}
+})
+
+
+removerTudo.addEventListener('click', (evt) => {
+  listadecontatos.innerHTML = ""
 })

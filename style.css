@@ -21,6 +21,7 @@ body {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
 }
 
 /* Título do formulário */
@@ -66,6 +67,8 @@ input[type="email"]:focus {
 /* Botão */
 #botaoes {
     text-align: center;
+    display: flex;
+    justify-content: space-between;
 }
 
 .btn {
@@ -79,6 +82,36 @@ input[type="email"]:focus {
     transition: background-color 0.3s ease;
 }
 
+.btn-remover-tudo{
+    padding: 12px;
+    font-size: 16px;
+    color: white;
+    background-color: #c21010;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-remover{ padding: 12px;
+    font-size: 16px;
+    color: white;
+    background-color: #c21010;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+text-align: center;}
+
+
+
+.dados{
+    padding: 10px;
+}
+
+
+
+
 .btn:hover {
     background-color: #3f4c97;
 }
@@ -86,14 +119,20 @@ input[type="email"]:focus {
 /* Lista de contatos */
 #listadecontatos {
     margin-top: 30px;
+    background-color: #fff;
+   border-radius: 10px;
+   width: 100%;
+   margin: auto;
 }
 
-#listadecontatos .contato {
-    background-color: #f4f7fc;
+#listadecontatos .remover {
+    background-color: #ffffff;
     padding: 15px;
     margin-bottom: 10px;
     border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
 }
 
 #listadecontatos .contato h4 {
